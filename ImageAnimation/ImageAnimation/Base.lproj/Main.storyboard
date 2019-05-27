@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="16u-gP-5ww">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Animation-->
+        <scene sceneID="tVy-vX-zpR">
+            <objects>
+                <viewController title="Image Animation" id="16u-gP-5ww" customClass="ViewController" customModule="ImageAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vUW-Ci-XN4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="84c-KV-kHd">
+                                <rect key="frame" x="107" y="802" width="200" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-mb-XIn">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="40"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startAnimation:" destination="16u-gP-5ww" eventType="touchUpInside" id="qYP-pr-CgI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq4-Pm-QdS">
+                                        <rect key="frame" x="115" y="0.0" width="85" height="40"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stopAnimation:" destination="16u-gP-5ww" eventType="touchUpInside" id="BC5-tL-nMn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9IT-8f-t1h"/>
+                                    <constraint firstAttribute="height" constant="40" id="mfO-g2-C69"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone-ring0" translatesAutoresizingMaskIntoConstraints="NO" id="dmF-dD-xr3">
+                                <rect key="frame" x="143" y="389" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="d8e-yN-kDr"/>
+                                    <constraint firstAttribute="width" constant="128" id="yrB-RR-Zjx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="84c-KV-kHd" firstAttribute="centerX" secondItem="vUW-Ci-XN4" secondAttribute="centerX" id="0FL-LM-xWv"/>
+                            <constraint firstItem="nLh-Ew-TuC" firstAttribute="bottom" secondItem="84c-KV-kHd" secondAttribute="bottom" constant="20" id="Abo-Qf-HUF"/>
+                            <constraint firstItem="dmF-dD-xr3" firstAttribute="centerY" secondItem="nLh-Ew-TuC" secondAttribute="centerY" id="Luq-8c-pbo"/>
+                            <constraint firstItem="dmF-dD-xr3" firstAttribute="centerX" secondItem="nLh-Ew-TuC" secondAttribute="centerX" id="g1C-3V-sl8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nLh-Ew-TuC"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dmF-dD-xr3" id="pAE-hE-JVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbS-Ky-haI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="phone-ring0" width="128" height="128"/>
+    </resources>
+</document>
